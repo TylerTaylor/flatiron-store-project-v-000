@@ -13,5 +13,5 @@
 <p>Order total: <strong>$<%= format_currency(@cart.total) %></strong> </p>
 
 <% if @cart.status == 'not submitted' %>
-  <%= button_to 'Checkout', checkout_path %>
+  <%= button_to 'Checkout', checkout_path, params: {user_id: @user.id} %>
 <% end %>
